@@ -1,0 +1,184 @@
+:root {
+    --brand: #eee0d1;
+    --primary: #653004;
+    --secondary: #b6721a;
+    --secondary-active: #d6a15b;
+    --blue: #204461;
+    --light-blue: #5e779f;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* utility */
+.container {
+    width: 100%;
+    max-width: 1248px;
+    margin: auto;
+}
+
+.link {
+    color: var(--brand);
+    padding: 8px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+.link:hover {
+    background-color: var(--secondary);
+}
+
+.link:active {
+    background-color: var(--secondary-active);
+}
+
+/* header */
+header {
+    background-color: var(--primary); 
+    color: var(--brand);
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+ }
+
+.navbar {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* main */
+main {
+    background-color: #271302b9;
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+.banner {
+    height: 600px;
+    background-image: url("./assets/background-main.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.banner-info {
+    color: var(--brand);
+    background-color: rgba(182, 114, 26, 0.35);
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 5px;
+    position: relative;
+    top: 80px;
+}
+
+.banner-info h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.banner h2 span {
+    color: var(--light-blue);
+}
+
+/* fabrics */
+.fabrics-cards {
+    margin-top: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;}
+
+.card {
+    width: 200px;
+    height: fit-content;
+    background-color: var(--blue);
+    color: var(--brand);
+    border-radius: 10px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.card h4 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+}
+
+.card-description {
+    height: 80px;
+    line-height: 20px;
+}
+
+
+/* footer */
+footer {
+    background-color: var(--primary);
+    color: var(--brand);
+}
+
+.copyright {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    gap: 12px;
+}
+
+.footer-links {
+    display: flex;
+}
+
+
+@media screen and (max-width: 600px) {
+    .fabrics-cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+    }
+}
+
